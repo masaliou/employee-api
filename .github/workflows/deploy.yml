@@ -19,9 +19,9 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
-          run: |
-            chmod +x mvnw
-            ./mvnw package -DskipTests
+        run: |
+          chmod +x mvnw
+          ./mvnw package -DskipTests
 
       - name: Build Docker image
         run: docker build -t employee-api:latest .
